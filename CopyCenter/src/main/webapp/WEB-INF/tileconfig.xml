@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base.defination" template="/WEB-INF/tiles/layoutTemplate.jsp">
+		<put-attribute name="title" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="header" value="/WEB-INF/tiles/menuBlank.jsp" />
+		<put-attribute name="sidemenu" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="home" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/home.jsp"></put-attribute>
+		<put-attribute name="sidemenu" value="/WEB-INF/tiles/loginMenu.jsp"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuBlank.jsp" />
+	</definition>
+
+	<definition name="registration" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/registration.jsp"></put-attribute>
+		<put-attribute name="sidemenu" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuBlank.jsp" />
+	</definition>
+
+	<definition name="signUp" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/registration.jsp"></put-attribute>
+		<put-attribute name="sidemenu" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuBlank.jsp" />
+	</definition>
+
+	<!-- Signup tile -->
+
+	<definition name="studentSignUp" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/studentSignUp.jsp"></put-attribute>
+		<put-attribute name="sidemenu" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuBlank.jsp" />
+	</definition>
+
+	<definition name="storeManagerSignUp" extends="base.defination">
+		<put-attribute name="body"
+			value="/WEB-INF/views/storeManagerSignUp.jsp"></put-attribute>
+		<put-attribute name="sidemenu" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuBlank.jsp" />
+	</definition>
+
+	<!-- success tiles -->
+
+	<definition name="regSuccess" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/regSuccess.jsp"></put-attribute>
+		<put-attribute name="sidemenu" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuBlank.jsp" />
+	</definition>
+
+	<!-- home page tiles -->
+	<definition name="studentHomePage" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/studentHome.jsp"></put-attribute>
+		<put-attribute name="sidemenu" value="/WEB-INF/tiles/sideMenuStudent.jsp"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuStu.jsp" />
+	</definition>
+
+	<definition name="storeManagerHomePage" extends="base.defination">
+		<put-attribute name="body"
+			value="/WEB-INF/views/storeManagerHome.jsp"></put-attribute>
+		<put-attribute name="sidemenu"
+			value="/WEB-INF/tiles/sideMenuStoreManager.jsp"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menu.jsp" />
+	</definition>
+
+	<!-- order Related -->
+	<definition name="orderForm" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/printOrderForm.jsp"></put-attribute>
+		<put-attribute name="sidemenu"
+			value="/WEB-INF/tiles/studentSideMenuOrder.jsp"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuStu.jsp" />
+	</definition>
+
+	<definition name="printJobForm" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/newPrintJob.jsp"></put-attribute>
+		<put-attribute name="sidemenu" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuStu.jsp" />
+	</definition>
+
+	<definition name="viewJob" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/viewPrintJob.jsp"></put-attribute>
+		<put-attribute name="sidemenu"
+			value="/WEB-INF/tiles/sideMenuStoreManager.jsp"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menu.jsp" />
+	</definition>
+
+
+
+	<!-- Document Upload -->
+	<definition name="uploadSuccess" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/uploadSuccess.jsp"></put-attribute>
+		<put-attribute name="sidemenu" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuStu.jsp" />
+	</definition>
+
+	<definition name="uploadFailure" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/uploadFail.jsp"></put-attribute>
+		<put-attribute name="sidemenu" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuStu.jsp" />
+	</definition>
+
+	<definition name="error" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/error.jsp"></put-attribute>
+		<put-attribute name="sidemenu" value=""></put-attribute>
+	</definition>
+
+	<!-- Store Manager Views -->
+	<definition name="viewOrders" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/viewOrder.jsp" />
+		<put-attribute name="sidemenu"
+			value="/WEB-INF/tiles/sideMenuStoreManager.jsp" />
+		<put-attribute name="header" value="/WEB-INF/tiles/menu.jsp" />
+	</definition>
+
+	<definition name="viewStuOrders" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/viewStuOrders.jsp" />
+		<put-attribute name="sidemenu" value="/WEB-INF/tiles/sideMenuStudent.jsp"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuStu.jsp" />
+	</definition>
+
+	<!-- Error Pages -->
+	<definition name="invalid" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/invalid.jsp" />
+		<put-attribute name="sidemenu" value="" />
+	</definition>
+
+	<definition name="unAuthorized" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/notAuthorized.jsp" />
+		<put-attribute name="sidemenu" value="" />
+		<put-attribute name="header" value="/WEB-INF/tiles/menuBlank.jsp" />
+	</definition>
+
+
+	<!-- Estimate Request UserSide -->
+	<definition name="requestForm" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/estimateRequest.jsp" />
+		<put-attribute name="sidemenu" value="" />
+		<put-attribute name="header" value="/WEB-INF/tiles/menuStu.jsp" />
+	</definition>
+
+
+	<!-- Message Sent success & Fail -->
+	<definition name="messageSent" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/messageSent.jsp" />
+		<put-attribute name="header" value="/WEB-INF/tiles/menuStu.jsp" />
+	</definition>
+
+	<definition name="viewRequest" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/viewRequests.jsp" />
+		<put-attribute name="header" value="/WEB-INF/tiles/menu.jsp" />
+		<put-attribute name="sidemenu"
+			value="/WEB-INF/tiles/sideMenuStoreManager.jsp" />
+	</definition>
+
+	<definition name="viewRequestStudent" extends="base.defination">
+		<put-attribute name="body"
+			value="/WEB-INF/views/viewRequestStudent.jsp" />
+		<put-attribute name="header" value="/WEB-INF/tiles/menuStu.jsp" />
+		<put-attribute name="sidemenu" value="/WEB-INF/tiles/sideMenuStudent.jsp"></put-attribute>
+	</definition>
+
+	<definition name="replyForm" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/replyForm.jsp" />
+		<put-attribute name="header" value="/WEB-INF/tiles/menuStu.jsp" />
+		<put-attribute name="sidemenu" value="/WEB-INF/tiles/sideMenuStudent.jsp"></put-attribute>
+	</definition>
+
+	<definition name="replyFormStoreManager" extends="base.defination">
+		<put-attribute name="body"
+			value="/WEB-INF/views/replyFormStoreManager.jsp" />
+		<put-attribute name="header" value="/WEB-INF/tiles/menu.jsp" />
+		<put-attribute name="sidemenu" value="/WEB-INF/tiles/sideMenuStoreManager.jsp"></put-attribute>
+	</definition>
+
+	<!-- Search Result -->
+
+	<definition name="searchResult" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/searchResult.jsp" />
+		<put-attribute name="sidemenu"
+			value="/WEB-INF/tiles/sideMenuStoreManager.jsp" />
+		<put-attribute name="header" value="/WEB-INF/tiles/menu.jsp" />
+	</definition>
+
+	<definition name="keywordNotFound" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/keyWordNotFound.jsp" />
+		<put-attribute name="sidemenu"
+			value="/WEB-INF/tiles/sideMenuStoreManager.jsp" />
+		<put-attribute name="header" value="/WEB-INF/tiles/menu.jsp" />
+	</definition>
+
+	<definition name="aboutus" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/aboutus.jsp"></put-attribute>
+		<put-attribute name="sidemenu" value="/WEB-INF/tiles/loginMenu.jsp"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuBlank.jsp" />
+	</definition>
+
+	<definition name="viewJobsStudent" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/viewJobsStudent.jsp"></put-attribute>
+		<put-attribute name="sidemenu" value="/WEB-INF/tiles/sideMenuStudent.jsp"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuStu.jsp" />
+	</definition>
+	
+	<definition name="jobCancelled" extends="base.defination">
+		<put-attribute name="body" value="/WEB-INF/views/jobCancelled.jsp"></put-attribute>
+		<put-attribute name="sidemenu" value="/WEB-INF/tiles/sideMenuStudent.jsp"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/menuStu.jsp" />
+	</definition>
+
+
+</tiles-definitions>
